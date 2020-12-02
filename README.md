@@ -13,3 +13,9 @@ that needed merely 208 bytes. More recent Java versions need even fewer bytes:
 ## Disclaimer
 
 Do not use in production 😉
+
+## Credits
+
+While the Java 1.0 quine is completely my own work, the Java 1.5 version
+is based on [this example](https://de.wikipedia.org/wiki/Quine_(Computerprogramm)#Beispiele) IIRC.
+I then used the Java 1.5 code to write the even shorter version for Java 10+.
