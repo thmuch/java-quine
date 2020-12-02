@@ -1,0 +1,1 @@
+class S{public static void main(String[]a){System.out.print((s+=(char)34)+s+';'+'}');}static String s="class S{public static void main(String[]a){System.out.print((s+=(char)34)+s+';'+'}');}static String s=";}
