@@ -9,6 +9,7 @@ that needed merely 208 bytes. More recent Java versions need even fewer bytes:
 - [Java 1.0 quine](src/main/java/S.java) (208 bytes)
 - [Java 1.5 quine](src/main/java/U.java) (172 bytes): Uses `printf` instead of `print`
 - [Java 10 quine](src/main/java/V.java) (166 bytes): Uses `var` instead of `String` type declaration
+- [Java 21 quine](src/main/java/W.java) (102 bytes): Uses an unnamed class and an instance main method (preview feature)
 
 The actual quines are linked above. But as they are one-liners (for briefness), they are pretty hard to read.
 So here is my Java 1.0 quine, formatted slightly better:
@@ -31,6 +32,15 @@ class V {
         var f = "class V{public static void main(String[]a){var f=%c%s%1$c;System.out.printf(f,34,f);}}";
         System.out.printf(f, 34, f);
     }
+}
+```
+
+Using Java 21 preview features, it gets even shorter (again, formatted for readability):
+
+```java
+void main() {
+    var f="void main(){var f=%c%s%1$c;System.out.printf(f,34,f);}";
+    System.out.printf(f,34,f);
 }
 ```
 
