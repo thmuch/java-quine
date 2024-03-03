@@ -1,0 +1,1 @@
+void main(){var f="void main(){var f=%c%s%1$c;System.out.printf(f,34,f);}";System.out.printf(f,34,f);}
