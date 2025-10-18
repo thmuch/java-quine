@@ -1,0 +1,1 @@
+void main(){var f="void main(){var f=%c%s%1$c;IO.print(f.formatted(34,f));}";IO.print(f.formatted(34,f));}
