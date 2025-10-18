@@ -10,6 +10,7 @@ that needed merely 208 bytes. More recent Java versions need even fewer bytes:
 - [Java 1.5 quine](src/main/java/U.java) (172 bytes): Uses `printf` instead of `print`
 - [Java 10 quine](src/main/java/V.java) (166 bytes): Uses `var` instead of `String` type declaration
 - [Java 21 quine](src/main/java/W.java) (102 bytes): Uses an unnamed class and an instance main method (preview feature)
+- [Java 25 quine](src/main/java/X.java) (106 bytes): Uses a compact source file with an instance main method – and the `IO` class.
 
 The actual quines are linked above. But as they are one-liners (for briefness), they are pretty hard to read.
 So here is my Java 1.0 quine, formatted slightly better:
@@ -44,6 +45,16 @@ void main() {
 }
 ```
 
+The following Java 25 version is slightly *longer* than the above version. I wanted to use the new `IO` class,
+but as this class does not offer a `printf` method, I had to make use of `formatted()` as well:
+
+```java
+void main(){
+    var f="void main(){var f=%c%s%1$c;IO.print(f.formatted(34,f));}";
+    IO.print(f.formatted(34,f));
+}
+```
+
 Remember, these formatted code examples are *no* quines – but they are easier to read to get the idea how quines work.
 
 ## Disclaimer
@@ -55,3 +66,5 @@ Do not use in production 😉
 While the Java 1.0 quine is completely my own work, the Java 1.5 version
 is based on [this example](https://de.wikipedia.org/wiki/Quine_(Computerprogramm)#Beispiele) IIRC.
 I then used the Java 1.5 code to write the even shorter version for Java 10+.
+The Java 25 version was inspired by [Bruno Borges](https://www.linkedin.com/posts/brunocborges_aquineis-acomputer-programthat-takes-activity-7385093273654177792-y7Xg),
+especially the use of the `IO` class.
