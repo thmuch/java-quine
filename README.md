@@ -46,10 +46,11 @@ void main() {
 ```
 
 The following Java 25 version is slightly *longer* than the above version. I wanted to use the new `IO` class,
-but as this class does not offer a `printf` method, I had to make use of `formatted()` as well:
+but as this class does not offer a `printf` method, I had to make use of `formatted()` as well. Of course,
+you call still use the shorter Java 21 with Java 25, as the former preview features are finalized now.
 
 ```java
-void main(){
+void main() {
     var f="void main(){var f=%c%s%1$c;IO.print(f.formatted(34,f));}";
     IO.print(f.formatted(34,f));
 }
@@ -66,5 +67,6 @@ Do not use in production 😉
 While the Java 1.0 quine is completely my own work, the Java 1.5 version
 is based on [this example](https://de.wikipedia.org/wiki/Quine_(Computerprogramm)#Beispiele) IIRC.
 I then used the Java 1.5 code to write the even shorter version for Java 10+.
-The Java 25 version was inspired by [Bruno Borges](https://www.linkedin.com/posts/brunocborges_aquineis-acomputer-programthat-takes-activity-7385093273654177792-y7Xg),
-especially the use of the `IO` class.
+[Bruno Borges](https://www.linkedin.com/posts/brunocborges_aquineis-acomputer-programthat-takes-activity-7385093273654177792-y7Xg)
+posted a Java 25 version with multiline Strings and the `IO` class – the latter served as inspiration
+for my Java 25 solution.
